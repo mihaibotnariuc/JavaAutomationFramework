@@ -46,6 +46,7 @@ public WebDriver getDriver(){
      return  driver;
     }
     public void tearDown(){
+        instance = null;
         driver.close();
         driver.quit();
         driver =null;
