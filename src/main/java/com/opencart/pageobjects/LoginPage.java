@@ -11,14 +11,14 @@ public class LoginPage extends Page {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy (xpath = "//a[normalize-space()='Login']")
-    private WebElement usernameInput;
-    @FindBy (xpath = "//input[@id='input-password']")
+    @FindBy (xpath = "//input[@id='input-email']")
+    private WebElement emailInput;
+    @FindBy (xpath = " //input[@id='input-password']")
     private WebElement passwordInput;
-    @FindBy (xpath = " //button[normalize-space()='Login']")
+    @FindBy (xpath = "//button[normalize-space()='Login']")
     private WebElement loginBtn;
     public void fillInTheLoginForm (String username, String password){
-        usernameInput.sendKeys(username);
+        emailInput.sendKeys(username);
         passwordInput.sendKeys(password);
     }
     public void clickLoginBtn(){

@@ -26,12 +26,21 @@ public class TestExecutionWithPageObjects {
                 randomEmail, randomPassword, true, true);
 
         registerPage.clickTheContinueButton();
+        homePage.navigateToLogOutFromHeader();
+        System.out.println("The log out was made successfully");
 
-//        homePage.navigateToLoginPageFromHeader();
-//
-//        LoginPage loginPage = new LoginPage(driver);
-//        loginPage.fillInTheLoginForm(randomEmail, randomPassword);
-//        loginPage.clickLoginBtn();
+        homePage.navigateToLoginPageFromHeader();
+
+
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.fillInTheLoginForm(randomEmail, randomPassword);
+        loginPage.clickLoginBtn();
+        System.out.println("welcome back!");
+
+        homePage.navigateToLogOutFromHeader();
+        System.out.println("The Work is Done!");
+
         DriverManager.getInstance().tearDown();
 
         System.out.println("The execution is over");

@@ -1,5 +1,6 @@
 package com.opencart.pageobjects;
 
+import com.opencart.managers.ScrollElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,11 +24,15 @@ public abstract class Page {
         registerBtn.click();
     }
     public void navigateToLoginPageFromHeader (){
+        ScrollElement.scrollToTheElement(myAccountIcon);
         myAccountIcon.click();
+        ScrollElement.scrollToTheElement(loginBtn);
         loginBtn.click();
     }
     public void navigateToLogOutFromHeader(){
+        ScrollElement.scrollToTheElement(myAccountIcon);
         myAccountIcon.click();
+        ScrollElement.scrollToTheElement(logOutBtn);
         logOutBtn.click();
     }
 
