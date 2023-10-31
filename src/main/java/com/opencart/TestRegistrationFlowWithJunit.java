@@ -4,6 +4,7 @@ import com.opencart.managers.RandomDataManager;
 import com.opencart.pageobjects.HomePage;
 import com.opencart.pageobjects.LoginPage;
 import com.opencart.pageobjects.RegisterPage;
+import io.cucumber.java.BeforeAll;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
