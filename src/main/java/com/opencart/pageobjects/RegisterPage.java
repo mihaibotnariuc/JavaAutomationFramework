@@ -17,7 +17,7 @@ public class RegisterPage extends Page {
     @FindBy (xpath = "//input[@id='input-email']")
     private WebElement emailInput;
     @FindBy (xpath = "//input[@id='input-password']")
-    private WebElement paswordInput;
+    private WebElement passwordInput;
     @FindBy(xpath = "//input[@id='input-newsletter']")
     private WebElement subscribeButton;
     @FindBy(xpath = "//input[@name='agree']")
@@ -30,7 +30,7 @@ public class RegisterPage extends Page {
         firstNameInput.sendKeys(firstName);
         lastNameInput.sendKeys(lastName);
         emailInput.sendKeys(email);
-        paswordInput.sendKeys(password);
+        passwordInput.sendKeys(password);
         if (subscribeButon){
             ScrollElement.scrollToTheElement(subscribeButton);
             subscribeButton.click();

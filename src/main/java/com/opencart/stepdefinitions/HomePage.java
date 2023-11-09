@@ -1,5 +1,6 @@
 package com.opencart.stepdefinitions;
 
+import com.opencart.managers.ConfigReaderManager;
 import com.opencart.managers.DriverManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -15,12 +16,12 @@ public class HomePage {
 
     @Given("The Homepage is displayed")
     public void theHomepageIsDisplayed() {
-        driver.get("https://andreisecuqa.host/");
+        driver.get(ConfigReaderManager.getPropertyValue("url"));
         System.out.println("The driver accessed the home page");
     }
 
     @And("RegisterPage is accessed from Homepage buttons")
-    public void registerpageIsAccessedFromHomepageButtons() {
+    public void registerPageIsAccessedFromHomepageButtons() {
         System.out.println("The second step is executed");
     }
 
